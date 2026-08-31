@@ -1,0 +1,23 @@
+{
+  "name": "api-connect",
+  "version": "1.0.0",
+  "description": "API REST para gerenciamento de usuários",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js"
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "express",
+    "crud"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
