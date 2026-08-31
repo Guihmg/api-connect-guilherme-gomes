@@ -28,7 +28,7 @@ Disponibilizar uma base back-end simples, modular e previsível para consumo por
 ## Estrutura do projeto
 
 ```text
-api-connect/
+api-connect-guilherme-gomes/
 ├── package.json
 ├── package-lock.json
 ├── .gitignore
@@ -58,8 +58,8 @@ api-connect/
 Clone o repositório e acesse a pasta:
 
 ```bash
-git clone https://github.com/SEU-USUARIO/api-connect.git
-cd api-connect
+git clone https://github.com/Guihmg/api-connect-guilherme-gomes.git
+cd api-connect-guilherme-gomes
 ```
 
 Instale as dependências:
@@ -106,6 +106,8 @@ POST /usuarios
 Content-Type: application/json
 ```
 
+Corpo da requisição:
+
 ```json
 {
   "nome": "Mariana Costa",
@@ -113,7 +115,7 @@ Content-Type: application/json
 }
 ```
 
-Resposta de sucesso:
+Exemplo de resposta de sucesso:
 
 ```json
 {
@@ -145,6 +147,8 @@ PATCH /usuarios/1
 Content-Type: application/json
 ```
 
+Corpo da requisição:
+
 ```json
 {
   "nome": "Ana Souza Atualizada"
@@ -161,7 +165,7 @@ Uma exclusão bem-sucedida retorna o status `204 No Content`.
 
 ## Validações e erros
 
-Os campos `nome` e `email` são obrigatórios no cadastro. O nome deve possuir pelo menos dois caracteres e o e-mail deve apresentar um formato válido. E-mails duplicados retornam `409 Conflict`.
+Os campos `nome` e `email` são obrigatórios no cadastro. O nome deve possuir pelo menos dois caracteres e o e-mail deve apresentar um formato válido. E-mails duplicados retornam o status `409 Conflict`.
 
 Exemplo de erro de validação:
 
@@ -196,8 +200,4 @@ Foram verificados os seguintes cenários:
 
 ## Persistência
 
-Os dados são persistidos no arquivo `src/data/users.json`. Essa estratégia é adequada ao objetivo didático e ao escopo de MVP, podendo ser substituída futuramente por um banco de dados.
-
-## Licença
-
-Este projeto está disponibilizado sob a licença MIT.
+Os dados são persistidos no arquivo `src/data/users.json`. Essa estratégia é adequada ao objetivo didático e ao escopo do MVP, podendo ser substituída futuramente por um banco de dados.
